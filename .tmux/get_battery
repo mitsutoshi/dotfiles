@@ -1,0 +1,17 @@
+#!/bin/sh
+
+info=`/usr/bin/pmset -g ps | tail -n 1 | sed -E 's/^.+	([0-9]{1,3})%; (.*);.*$/\1,\2/g'`
+power=`echo $info | cut -d, -f1`
+state=`echo $info | cut -d, -f2`
+
+if [[ ! $state == "discharging" ]]; then
+  battery="#[fg=black] ⚡ $power% #[default]"
+elif (( $power < 16 )); then
+  battery="#[bg=yellow,fg=red] $power% #[default]"
+elif (( $power < 30 )); then
+  battery="#[bg=yellow,fg=orange] $power% #[default]"
+else
+  battery="#[bg=yellow,fg=green] $power% #[default]"
+fi
+
+echo $battery
