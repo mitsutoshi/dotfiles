@@ -23,8 +23,8 @@ set incsearch
 set hlsearch
 set clipboard+=unnamed
 
-" syntax enable
-colorscheme jellybeans
+"syntax enable
+colorscheme monokai
 augroup highlightIdegraphicSpace
   autocmd!
   autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
