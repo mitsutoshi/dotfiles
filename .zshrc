@@ -2,6 +2,34 @@ if [ -f ~/.zshrc ]; then
     . ~/.bashrc
 fi
 
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+export LC_ALL=en_US.UTF-8
+export EDITOR='vim'
+export VISUAL='vim'
+export HISTFILE=${HOME}/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=5000
+export XDG_CONFIG_HOME=$HOME/.config
+export VIMRUNTIME=/usr/local/Cellar/neovim/0.4.3/share/nvim/runtime
+
+# pyenv
+export PYENV_ROOT=~/.pyenv
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)";
+fi
+
+# go
+export GOPATH=~/dev
+export PATH=$PATH:$GOPATH/bin
+
+# yarn
+export PATH="~/.yarn/bin:~/.config/yarn/global/node_modules/.bin:$PATH"
+
+# vi mode
+bindkey -v
+
 git config --global core.editor nvim
 git config --global ghq.root ~/dev/src
 
