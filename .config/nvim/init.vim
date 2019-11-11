@@ -87,7 +87,7 @@ let NERDTreeShowHidden = 1
 " autocmd VimEnter * execute 'NERDTree'
 
 " Previm
-nnoremap <silent><C-m> :PrevimOpen<CR>
+"nnoremap <silent><C-m> :PrevimOpen<CR>
 let g:vim_markdown_folding_disabled=1
 let g:previm_enable_realtime = 1
 
