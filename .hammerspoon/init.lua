@@ -1,3 +1,18 @@
+--[[
+
+ HammerSpoon Configuration File
+ ------------------------------
+
+ Set up the following key operations.
+
+ ctrl+h: Left
+ ctrl+j: Down
+ ctrl+k: Up
+ ctrl+l: Right
+ left-command: Change input source to English
+ right-command: Change input source to Japanese
+
+]]
 local function keyCode(key, modifiers)
    modifiers = modifiers or {}
    return function()
