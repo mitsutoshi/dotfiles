@@ -36,6 +36,8 @@ git config --global ghq.root ~/dev/src
 alias vim="nvim"
 alias g='cd $(ghq list --full-path | peco)'
 alias h='$(history -n 1 | peco)'
+alias ej='trans en:ja'
+alias je='trans ja:en'
 
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
