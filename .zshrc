@@ -35,7 +35,7 @@ git config --global ghq.root ~/dev/src
 
 alias vim="nvim"
 alias g='cd $(ghq list --full-path | peco)'
-alias h='TMPH=`history -n 1 | peco`; echo $TMPH; echo $TMPH | pbcopy'
+alias h='TMPH=`history -rn 1 | peco`; echo $TMPH; echo $TMPH | pbcopy'
 alias ej='trans en:ja'
 alias je='trans ja:en'
 
