@@ -22,6 +22,7 @@ set encoding=utf-8
 set incsearch
 set hlsearch
 set clipboard+=unnamed
+set nostartofline
 
 "syntax enable
 colorscheme monokai
