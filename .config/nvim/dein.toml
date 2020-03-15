@@ -1,0 +1,45 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+    let g:deoplete#enable_at_startup = 1
+    let g:deoplete#auto_completion_start_length = 1
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+    nnoremap <silent><C-e> :NERDTreeToggle<CR>
+    let NERDTreeShowHidden = 1
+'''
+
+#[[plugins]]
+#repo = 'Shougo/vimshell.vim', { 'rev': '3787e5' }
+
+[[plugins]]
+repo = 'yuttie/comfortable-motion.vim'
+
+#[[plugins]]
+#repo = 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+
+#[[plugins]]
+#repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+    let g:airline_powerline_fonts = 1
+'''
+depends = ['vim-airline-themes']
+

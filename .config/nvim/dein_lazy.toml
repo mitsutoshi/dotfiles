@@ -1,0 +1,44 @@
+#
+# golang
+#
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = ['go']
+hook_add = '''
+    autocmd FileType go nmap <leader>f <Plug>(go-format)
+    autocmd FileType go nmap <leader>i <Plug>(go-imports)
+    autocmd FileType go nmap <leader>b <Plug>(go-build)
+    autocmd FileType go nmap <leader>r <Plug>(go-run)
+    autocmd FileType go nmap <leader>d <Plug>(go-doc)
+    let g:go_gocode_unimported_packages = 1
+    let g:go_auto_type_info = 1
+'''
+
+#
+# markdown
+#
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = ['markdown']
+hook_add = '''
+    let g:vim_markdown_folding_disabled=1
+'''
+
+[[plugins]]
+repo = 'kannokanno/previm'
+on_source = 'vim-markdown'
+hook_add = '''
+    let g:previm_enable_realtime = 1
+'''
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+on_source = 'previm'
+
+#
+# Python
+#
+[[plugins]]
+repo = 'deoplete-plugins/deoplete-jedi'
+on_ft = ['python']
+
