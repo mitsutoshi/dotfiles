@@ -2,6 +2,33 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'Shougo/denite.nvim'
+depends = ['roxma/nvim-yarp', 'roxma/vim-hug-neovim-rpc']
+hook_add = '''
+    autocmd FileType denite call s:denite_my_settings()
+    function s:denite_my_settings() abort
+        nnoremap <silent><buffer><expr> <CR>
+        \ denite#do_map('do_action')
+        nnoremap <silent><buffer><expr> d
+        \ denite#do_map('do_action', 'delete')
+        nnoremap <silent><buffer><expr> p
+        \ denite#do_map('do_action', 'preview')
+        nnoremap <silent><buffer><expr> q
+        \ denite#do_map('quit')
+        nnoremap <silent><buffer><expr> i
+        \ denite#do_map('open_filter_buffer')
+        nnoremap <silent><buffer><expr> <Space>
+        \ denite#do_map('toggle_select').'j'
+    endfunction
+'''
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
     let g:deoplete#enable_at_startup = 1
@@ -20,9 +47,6 @@ hook_add = '''
     nnoremap <silent><C-e> :NERDTreeToggle<CR>
     let NERDTreeShowHidden = 1
 '''
-
-#[[plugins]]
-#repo = 'Shougo/vimshell.vim', { 'rev': '3787e5' }
 
 [[plugins]]
 repo = 'yuttie/comfortable-motion.vim'
