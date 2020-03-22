@@ -1,6 +1,6 @@
 #
 # golang
-#
+# =============================================================================
 [[plugins]]
 repo = 'fatih/vim-go'
 on_ft = ['go']
@@ -16,7 +16,7 @@ hook_add = '''
 
 #
 # markdown
-#
+# =============================================================================
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
 on_ft = ['markdown']
@@ -37,8 +37,15 @@ on_source = 'previm'
 
 #
 # Python
-#
+# =============================================================================
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-jedi'
 on_ft = ['python']
+
+#
+# Toml
+# =============================================================================
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
 
