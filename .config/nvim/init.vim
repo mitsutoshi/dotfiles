@@ -8,7 +8,7 @@ set cursorline
 set number
 set ruler
 set list
-set listchars=space:.,nbsp:%,eol:↲,tab:»-,trail:-,extends:»,precedes:«
+set listchars=nbsp:%,eol:↲,tab:»-,trail:-,extends:»,precedes:« "space:.,
 set nowrap
 set showmatch
 set tabstop=4
@@ -48,7 +48,7 @@ if &compatible
   set nocompatible
 endif
 
-set runtimepath+=~/dev/src/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 let s:dein_dir = expand('~/.cache/dein')
 let s:toml_dir = expand('~/.config/nvim')
 

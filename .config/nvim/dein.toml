@@ -52,7 +52,7 @@ hook_add = '''
 repo = 'yuttie/comfortable-motion.vim'
 
 #[[plugins]]
-#repo = 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+repo = 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 #[[plugins]]
 #repo = 'itchyny/lightline.vim'
