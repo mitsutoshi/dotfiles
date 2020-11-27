@@ -38,6 +38,11 @@ on_source = 'previm'
 #
 # Python
 # =============================================================================
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = ['python']
+
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-jedi'
 on_ft = ['python']
