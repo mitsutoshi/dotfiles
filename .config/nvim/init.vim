@@ -36,6 +36,7 @@ augroup END
 
 let mapleader = "\<Space>"
 nnoremap <leader>w :w<CR>
+nnoremap <leader>q :qa<CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <silent><C-p> :bprev<CR>
 nnoremap <silent><C-n> :bnext<CR>
