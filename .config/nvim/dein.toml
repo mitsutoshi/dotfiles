@@ -42,7 +42,7 @@ repo = 'Shougo/neosnippet.vim'
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
-repo = 'scrooloose/nerdtree'
+repo = 'preservim/nerdtree'
 hook_add = '''
     nnoremap <silent><C-e> :NERDTreeToggle<CR>
     let NERDTreeShowHidden = 1
@@ -52,7 +52,8 @@ hook_add = '''
 repo = 'yuttie/comfortable-motion.vim'
 
 #[[plugins]]
-repo = 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+#repo = 'neoclide/coc.nvim'
+#build = './install.sh nightly'
 
 #[[plugins]]
 #repo = 'itchyny/lightline.vim'
@@ -67,3 +68,5 @@ hook_add = '''
 '''
 depends = ['vim-airline-themes']
 
+[[plugins]]
+repo = 'ConradIrwin/vim-bracketed-paste'
