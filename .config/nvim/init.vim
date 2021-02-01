@@ -27,6 +27,12 @@ set hlsearch
 set clipboard+=unnamed
 set nostartofline
 
+set nocompatible
+map ^[OA ^[ka
+map ^[OB ^[ja
+map ^[OC ^[la
+map ^[OD ^[ha
+
 colorscheme jellybeans
 augroup highlightIdegraphicSpace
   autocmd!
@@ -48,10 +54,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 "-------------------------------------------------------------------------------
 
 " Start dein scripts -->
-if &compatible
-  set nocompatible
-endif
-
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 let s:dein_dir = expand('~/.cache/dein')
 let s:toml_dir = expand('~/.config/nvim')

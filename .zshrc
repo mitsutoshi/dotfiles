@@ -9,7 +9,7 @@ export EDITOR='vim'
 export VISUAL='vim'
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
-export SAVEHIST=5000
+export SAVEHIST=10000
 export XDG_CONFIG_HOME=$HOME/.config
 export VIMRUNTIME=/usr/local/Cellar/neovim/0.4.4/share/nvim/runtime
 

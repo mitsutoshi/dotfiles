@@ -1,22 +1,54 @@
 #!/bin/zsh
 
-REPO_DIR="~/repos"
+REPO="github.com/mitsutoshi/dotfiles"
 
 printf "password: "
 read PASSWORD
-printf "github username: "
-read GHB_USER
-printf "github password: "
-read GHB_PASS
 
 echo "\n [Setup MacOS]"
-src/setup_macos.sh
+# show full path on finder
+defaults write com.apple.finder _FXShowPosixPathInTitle -boolean true
 
-echo "\n [Install Homebrew & Homebrew Package]"
-src/add_brew.sh
+# show remaining battery power %
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
-echo "\n [Clone dotfiles repository]"
-src/clone_dotfiles.sh $REPO_DIR $GHB_USER $GHB_PASS
+# shorten key repeat interval
+defaults write -g InitialKeyRepeat -int 15
 
-echo "\n [Create symbolic link]"
-src/add_symlink.sh
+# hide dock automatically
+defaults write com.apple.dock autohide -bool true
+
+
+echo "\n"
+echo "===================================="
+echo "Install Homebrew & Homebrew Package"
+echo "===================================="
+which brew > /dev/null
+if [ $? -e 0 ]; then
+    echo "Homebrew already exists [`which brew`]"
+else
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    while read line; do yes | brew install $line; done < ./brew.lst
+    while read line; do yes | brew install $line; done < ./brewcask.lst
+fi
+
+
+echo "\n"
+echo "============================"
+echo "Clone dotfiles"
+echo "============================"
+ghq get https://$REPO
+
+
+echo "\n"
+echo "============================"
+echo "Setup Home Directory"
+echo "============================"
+ln -s ~/ghq/$REPO/.zshrc      .zshrc
+ln -s ~/ghq/$REPO/.zshenv     .zshenv
+ln -s ~/ghq/$REPO/.tmux       .tmux
+ln -s ~/ghq/$REPO/.tmuxconf   .tmuxconf
+ln -s ~/ghq/$REPO/.config     .config
+ln -s .config/nvim            .vim
+ln -s .config/nvim/init.vim   .vimrc
+
