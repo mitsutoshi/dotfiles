@@ -20,10 +20,6 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv init -)";
 fi
 
-# go
-export GOPATH=~/dev
-export PATH=$PATH:$GOPATH/bin
-
 # yarn
 export PATH="~/.yarn/bin:~/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -31,7 +27,6 @@ export PATH="~/.yarn/bin:~/.config/yarn/global/node_modules/.bin:$PATH"
 bindkey -v
 
 git config --global core.editor nvim
-git config --global ghq.root ~/dev/src
 
 alias vim="nvim"
 alias g='cd $(ghq list --full-path | peco)'
