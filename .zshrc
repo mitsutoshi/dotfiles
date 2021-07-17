@@ -11,7 +11,7 @@ export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=10000
 export XDG_CONFIG_HOME=$HOME/.config
-export VIMRUNTIME=/usr/local/Cellar/neovim/0.4.4/share/nvim/runtime
+export VIMRUNTIME=/usr/local/Cellar/neovim/0.5.0/share/nvim/runtime
 
 # pyenv
 export PYENV_ROOT=~/.pyenv
