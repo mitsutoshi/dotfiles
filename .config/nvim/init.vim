@@ -33,7 +33,7 @@ map ^[OB ^[ja
 map ^[OC ^[la
 map ^[OD ^[ha
 
-colorscheme jellybeans
+colorscheme monokai
 augroup highlightIdegraphicSpace
   autocmd!
   autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
