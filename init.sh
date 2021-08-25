@@ -5,7 +5,11 @@ REPO="github.com/mitsutoshi/dotfiles"
 printf "password: "
 read PASSWORD
 
-echo "\n [Setup MacOS]"
+
+echo "===================================="
+echo "Setup MacOS"
+echo "===================================="
+
 # show full path on finder
 defaults write com.apple.finder _FXShowPosixPathInTitle -boolean true
 
@@ -44,6 +48,7 @@ echo "\n"
 echo "============================"
 echo "Setup Home Directory"
 echo "============================"
+mkdir ~/ghq
 ln -s ~/ghq/$REPO/.zshrc      .zshrc
 ln -s ~/ghq/$REPO/.zshenv     .zshenv
 ln -s ~/ghq/$REPO/.tmux       .tmux

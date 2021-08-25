@@ -16,6 +16,7 @@ export VIMRUNTIME=/usr/local/Cellar/neovim/0.5.0/share/nvim/runtime
 # pyenv
 export PYENV_ROOT=~/.pyenv
 eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init --path)"
 
 # go
 export GOPATH=~/dev

@@ -12,6 +12,8 @@ hook_add = '''
     autocmd FileType go nmap <leader>d <Plug>(go-doc)
     let g:go_gocode_unimported_packages = 1
     let g:go_auto_type_info = 1
+    let g:go_def_mode='gopls'
+    let g:go_info_mode='gopls'
 '''
 
 #

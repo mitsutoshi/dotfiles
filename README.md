@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-dotfiles is my home directory build tool. This tool will do the following.
+dotfiles is a tool to build my home directory. This tool will do the following.
 
 * Change MacOS settings
 * Install Homebrew & Homebrew package
@@ -23,7 +23,5 @@ Execute following command for setup.  Files in this repositorys will be installe
 
     ```zsh
     dotfiles % ./init.sh
-    password: xxxxxx
-    github username: xxxxxx
-    github password: xxxxxx
+    PASSWORD: xxxxxx
     ```
