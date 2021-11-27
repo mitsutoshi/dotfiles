@@ -48,12 +48,14 @@ echo "\n"
 echo "============================"
 echo "Setup Home Directory"
 echo "============================"
+cd ~
 mkdir ~/ghq
-ln -s ~/ghq/$REPO/.zshrc      .zshrc
-ln -s ~/ghq/$REPO/.zshenv     .zshenv
-ln -s ~/ghq/$REPO/.tmux       .tmux
-ln -s ~/ghq/$REPO/.tmuxconf   .tmuxconf
-ln -s ~/ghq/$REPO/.config     .config
-ln -s .config/nvim            .vim
-ln -s .config/nvim/init.vim   .vimrc
+ln -s ~/ghq/$REPO/.zshrc       .zshrc
+ln -s ~/ghq/$REPO/.zshenv      .zshenv
+ln -s ~/ghq/$REPO/.tmux        .tmux
+ln -s ~/ghq/$REPO/.tmux.conf   .tmux.conf
+ln -s ~/ghq/$REPO/.config      .config
+ln -s ~/ghq/$REPO/.hammerspoon .hammerspoon
+ln -s .config/nvim             .vim
+ln -s .config/nvim/init.vim    .vimrc
 
