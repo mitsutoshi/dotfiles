@@ -1,6 +1,7 @@
 " Base Setting
 "-------------------------------------------------------------------------------
-let g:python_host_prog = $PYENV_ROOT.'/versions/neovim-python2/bin/python'
+"let g:python_host_prog = $PYENV_ROOT.'/versions/neovim-python2/bin/python'
+let g:python_host_prog = system('echo -n $(which python2)')
 let g:python3_host_prog = $PYENV_ROOT.'/versions/neovim-python3/bin/python'
 
 set backupdir=~/.vim
@@ -54,7 +55,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 "-------------------------------------------------------------------------------
 
 " Start dein scripts -->
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/ghq/github.com/Shougo/dein.vim
 let s:dein_dir = expand('~/.cache/dein')
 let s:toml_dir = expand('~/.config/nvim')
 

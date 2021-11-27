@@ -1,7 +1,3 @@
-if [ -f ~/.zshrc ]; then
-    . ~/.bashrc
-fi
-
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export LC_ALL=en_US.UTF-8
@@ -11,25 +7,21 @@ export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=10000
 export XDG_CONFIG_HOME=$HOME/.config
-export VIMRUNTIME=/usr/local/Cellar/neovim/0.5.0/share/nvim/runtime
+export VIMRUNTIME=/opt/homebrew/Cellar/neovim/0.5.1_1/share/nvim/runtime
 
 # pyenv
 export PYENV_ROOT=~/.pyenv
-eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# go
-export GOPATH=~/dev
-export PATH=$PATH:$GOPATH/bin
-
 # yarn
-export PATH="~/.yarn/bin:~/.config/yarn/global/node_modules/.bin:$PATH"
+#export PATH="~/.yarn/bin:~/.config/yarn/global/node_modules/.bin:$PATH"
 
 # vi mode
 bindkey -v
 
 git config --global core.editor nvim
-git config --global ghq.root ~/dev/src
+#git config --global ghq.root ~/ghq
 
 alias vim="nvim"
 alias g='cd $(ghq list --full-path | peco)'
