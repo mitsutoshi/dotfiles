@@ -10,10 +10,23 @@ hook_add = '''
     autocmd FileType go nmap <leader>b <Plug>(go-build)
     autocmd FileType go nmap <leader>r <Plug>(go-run)
     autocmd FileType go nmap <leader>d <Plug>(go-doc)
-    let g:go_gocode_unimported_packages = 1
+    autocmd FileType go nmap <leader>k <Plug>(go-def)
     let g:go_auto_type_info = 1
     let g:go_def_mode='gopls'
     let g:go_info_mode='gopls'
+
+    " My neovim setup for Go
+    " https://medium.com/hackernoon/my-neovim-setup-for-go-7f7b6e805876
+    let g:go_auto_sameids = 1
+    let g:go_highlight_build_constraints = 1
+    let g:go_highlight_extra_types = 1
+    let g:go_highlight_fields = 1
+    let g:go_highlight_functions = 1
+    let g:go_highlight_methods = 1
+    let g:go_highlight_operators = 1
+    let g:go_highlight_structs = 1
+    let g:go_highlight_types = 1
+    let g:go_fmt_command = "goimports"
 '''
 
 #
@@ -61,4 +74,35 @@ on_ft = ['toml']
 # =============================================================================
 [[plugins]]
 repo = 'rust-lang/rust.vim'
-on_ft = ['rs']
+on_ft = ['rust']
+hook_add = '''
+    let g:rustfmt_autosave = 1
+    autocmd FileType rs nmap <leader>r <Plug>RustRun
+'''
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_ft = 'rust'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+on_ft = ['rust', 'python']
+hook_add = '''
+    set updatetime=300
+
+    if has("patch-8.1.1564")
+      " Recently vim can merge signcolumn and number column into one
+      set signcolumn=number
+    else
+      set signcolumn=yes
+    endif
+
+    inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                                  \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+    nmap <silent> gd <Plug>(coc-definition)
+    nmap <silent> gy <Plug>(coc-type-definition)
+    nmap <silent> gi <Plug>(coc-implementation)
+    nmap <silent> gr <Plug>(coc-references)
+'''

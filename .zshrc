@@ -1,27 +1,11 @@
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-export LC_ALL=en_US.UTF-8
-export EDITOR='vim'
-export VISUAL='vim'
-export HISTFILE=${HOME}/.zsh_history
-export HISTSIZE=1000
-export SAVEHIST=10000
-export XDG_CONFIG_HOME=$HOME/.config
-export VIMRUNTIME=/opt/homebrew/Cellar/neovim/0.5.1_1/share/nvim/runtime
-
 # pyenv
-export PYENV_ROOT=~/.pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# yarn
-#export PATH="~/.yarn/bin:~/.config/yarn/global/node_modules/.bin:$PATH"
-
-# vi mode
+# viins
 bindkey -v
 
 git config --global core.editor nvim
-#git config --global ghq.root ~/ghq
 
 alias vim="nvim"
 alias g='cd $(ghq list --full-path | peco)'

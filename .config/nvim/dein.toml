@@ -33,13 +33,6 @@ repo = 'roxma/nvim-yarp'
 repo = 'roxma/vim-hug-neovim-rpc'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-    let g:deoplete#enable_at_startup = 1
-    let g:deoplete#auto_completion_start_length = 1
-'''
-
-[[plugins]]
 repo = 'Shougo/neosnippet.vim'
 
 [[plugins]]
@@ -54,13 +47,6 @@ hook_add = '''
 
 [[plugins]]
 repo = 'yuttie/comfortable-motion.vim'
-
-#[[plugins]]
-#repo = 'neoclide/coc.nvim'
-#build = './install.sh nightly'
-
-#[[plugins]]
-#repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'

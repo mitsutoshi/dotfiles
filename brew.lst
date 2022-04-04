@@ -8,3 +8,4 @@ pyenv-virtualenv
 reattach-to-user-namespace
 tmux
 translate-shell
+node
