@@ -26,7 +26,6 @@ hook_add = '''
     let g:go_highlight_operators = 1
     let g:go_highlight_structs = 1
     let g:go_highlight_types = 1
-    let g:go_fmt_command = "goimports"
 '''
 
 #
@@ -80,14 +79,17 @@ hook_add = '''
     autocmd FileType rs nmap <leader>r <Plug>RustRun
 '''
 
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-on_ft = 'rust'
+#[[plugins]]
+#repo = 'Shougo/deoplete.nvim'
+#on_ft = ['rust']
+#hook_add = '''
+#    let g:deoplete#enable_at_startup = 0
+#'''
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
-on_ft = ['rust', 'python']
+on_ft = ['rust', 'python', 'go']
 hook_add = '''
     set updatetime=300
 
@@ -105,4 +107,18 @@ hook_add = '''
     nmap <silent> gy <Plug>(coc-type-definition)
     nmap <silent> gi <Plug>(coc-implementation)
     nmap <silent> gr <Plug>(coc-references)
+
+    "function! s:check_back_space() abort
+    "  let col = col('.') - 1
+    "  return !col || getline('.')[col - 1]  =~# '\s'
+    "endfunction
+    "inoremap <silent><expr> <TAB>
+    "      \ pumvisible() ? "\<C-n>" :
+    "      \ <SID>check_back_space() ? "\<TAB>" :
+    "      \ coc#refresh()
+    "inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+    " Use <c-space> to trigger completion.
+    inoremap <silent><expr> <C-space> coc#refresh()
+    inoremap <silent><expr> <C-x><C-o> coc#refresh()
 '''

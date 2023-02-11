@@ -11,7 +11,7 @@ export SAVEHIST=10000
 export XDG_CONFIG_HOME=$HOME/.config
 
 # nvim
-export VIMRUNTIME=/opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime
+export VIMRUNTIME=/opt/homebrew/Cellar/neovim/0.8.1/share/nvim/runtime
 
 # pyenv
 export PYENV_ROOT=~/.pyenv
