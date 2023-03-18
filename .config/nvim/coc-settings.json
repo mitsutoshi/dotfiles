@@ -8,5 +8,6 @@
   },
   "coc.preferences.formatOnSaveFiletypes": [
     "rust"
-  ]
+  ],
+  "python.jediEnabled": true
 }

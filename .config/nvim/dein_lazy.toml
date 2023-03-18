@@ -53,9 +53,9 @@ on_source = 'previm'
 # Python
 # =============================================================================
 
-[[plugins]]
-repo = 'davidhalter/jedi-vim'
-on_ft = ['python']
+#[[plugins]]
+#repo = 'davidhalter/jedi-vim'
+#on_ft = ['python']
 
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-jedi'
@@ -89,7 +89,7 @@ hook_add = '''
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
-on_ft = ['rust', 'python', 'go']
+on_ft = ['python', 'go']
 hook_add = '''
     set updatetime=300
 
