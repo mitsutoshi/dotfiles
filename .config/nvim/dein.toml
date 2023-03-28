@@ -1,45 +1,8 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-#[[plugins]]
-#repo = 'Shougo/denite.nvim'
-#depends = ['roxma/nvim-yarp', 'roxma/vim-hug-neovim-rpc']
-#hook_add = '''
-#    autocmd FileType denite call s:denite_my_settings()
-#    function! s:denite_my_settings() abort
-#        nnoremap <silent><buffer><expr> <CR>
-#        \ denite#do_map('do_action')
-#        nnoremap <silent><buffer><expr> d
-#        \ denite#do_map('do_action', 'delete')
-#        nnoremap <silent><buffer><expr> p
-#        \ denite#do_map('do_action', 'preview')
-#        nnoremap <silent><buffer><expr> <ESC>
-#        \ denite#do_map('quit')
-#        nnoremap <silent><buffer><expr> i
-#        \ denite#do_map('open_filter_buffer')
-#        nnoremap <silent><buffer><expr> <Space>
-#        \ denite#do_map('toggle_select').'j'
-#    endfunction
-#
-#    nmap [denite] <Nop>
-#    map , [denite]
-#    nnoremap <silent> [denite]f :<C-u>Denite file buffer file:new<CR>
-#'''
-
-#[[plugins]]
-#repo = 'roxma/nvim-yarp'
-
-#[[plugins]]
-#repo = 'roxma/vim-hug-neovim-rpc'
-
-#[[plugins]]
-#repo = 'Shougo/neosnippet.vim'
-#hook_add = '''
-#    let g:neosnippet#snippets_directory='~/.vim/snippets/'
-#'''
-
-#[[plugins]]
-#repo = 'Shougo/neosnippet-snippets'
+# ------------------------------------------------------
+# NERDTREE
 
 [[plugins]]
 repo = 'preservim/nerdtree'
@@ -49,17 +12,27 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'yuttie/comfortable-motion.vim'
+repo = 'Xuyuanp/nerdtree-git-plugin'
+depends = ['nerdtree']
 
 [[plugins]]
-repo = 'vim-airline/vim-airline-themes'
+repo = 'ryanoasis/vim-devicons'
 
-[[plugins]]
-repo = 'vim-airline/vim-airline'
-hook_add = '''
-    let g:airline_powerline_fonts = 1
-'''
-depends = ['vim-airline-themes']
+# ----------------------------------------------------
 
 [[plugins]]
 repo = 'ConradIrwin/vim-bracketed-paste'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'yuttie/comfortable-motion.vim'
+
+[[plugins]]
+repo = 'APZelos/blamer.nvim'
+hook_add = '''
+    let g:blamer_enabled = 1
+    let g:blamer_delay = 500
+    let g:blamer_date_format = '%Y-%m-%d %H:%M:%S'
+'''

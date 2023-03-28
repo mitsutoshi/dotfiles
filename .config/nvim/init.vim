@@ -1,6 +1,5 @@
 " Base Setting
 "-------------------------------------------------------------------------------
-"let g:python_host_prog = $PYENV_ROOT.'/versions/neovim-python2/bin/python'
 let g:python_host_prog = system('echo -n $(which python2)')
 let g:python3_host_prog = $PYENV_ROOT.'/versions/neovim-python3/bin/python'
 
