@@ -1,11 +1,12 @@
+ctags
 ghq
 git
 golang
 neovim
+node
 peco
 pyenv
 pyenv-virtualenv
 reattach-to-user-namespace
 tmux
 translate-shell
-node
