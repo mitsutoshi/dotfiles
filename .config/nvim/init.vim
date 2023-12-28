@@ -41,11 +41,16 @@ augroup highlightIdegraphicSpace
 augroup END
 
 let mapleader = "\<Space>"
+
+" normal mode
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :qa<CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <silent><C-p> :bprev<CR>
 nnoremap <silent><C-n> :bnext<CR>
+
+" terminal mode
+tnoremap <silent> <C-w>n <C-\><C-n>
 
 au VimLeave * mks! ~/Session.vim
 au BufRead,BufNewFile *.md set filetype=markdown
