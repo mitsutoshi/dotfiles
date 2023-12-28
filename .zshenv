@@ -11,7 +11,7 @@ export SAVEHIST=10000
 export XDG_CONFIG_HOME=$HOME/.config
 
 # nvim
-export VIMRUNTIME=/opt/homebrew/Cellar/neovim/0.8.3/share/nvim/runtime
+export VIMRUNTIME=/opt/homebrew/Cellar/neovim/0.9.4/share/nvim/runtime
 
 # pyenv
 export PYENV_ROOT=~/.pyenv
@@ -24,3 +24,5 @@ export PATH=$PATH:~/go/bin
 
 # solana
 export PATH="~/.local/share/solana/install/active_release/bin:$PATH"
+
+export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
