@@ -79,17 +79,17 @@ hook_add = '''
     autocmd FileType rs nmap <leader>r <Plug>RustRun
 '''
 
-#[[plugins]]
-#repo = 'Shougo/deoplete.nvim'
-#on_ft = ['rust']
-#hook_add = '''
-#    let g:deoplete#enable_at_startup = 0
-#'''
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_ft = ['rust']
+hook_add = '''
+    "let g:deoplete#enable_at_startup = 1
+'''
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
-on_ft = ['python', 'go']
+on_ft = ['python', 'go', 'rust']
 hook_add = '''
     set updatetime=300
 
@@ -121,4 +121,6 @@ hook_add = '''
     " Use <c-space> to trigger completion.
     inoremap <silent><expr> <C-space> coc#refresh()
     inoremap <silent><expr> <C-x><C-o> coc#refresh()
+
+    let g:coc_global_extensions = ['coc-rust-analyzer']
 '''
