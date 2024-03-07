@@ -14,6 +14,7 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "rust"
   ],
+  "rust-analyzer.server.extraEnv": { "RUSTUP_TOOLCHAIN": "stable" },
   "python.jediEnabled": true
 }
 

@@ -89,7 +89,7 @@ hook_add = '''
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
-on_ft = ['python', 'go', 'rust']
+on_ft = ['python', 'go', 'rust', 'typescript']
 hook_add = '''
     set updatetime=300
 
