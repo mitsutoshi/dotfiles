@@ -48,6 +48,8 @@ nnoremap <leader>q :qa<CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <silent><C-p> :bprev<CR>
 nnoremap <silent><C-n> :bnext<CR>
+nnoremap <silent><C-x>p :echo expand('%')<CR>
+nnoremap <silent><C-x>fp :echo expand('%:p')<CR>
 
 " terminal mode
 tnoremap <silent> <C-w>n <C-\><C-n>
