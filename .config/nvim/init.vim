@@ -50,6 +50,9 @@ nnoremap <silent><C-p> :bprev<CR>
 nnoremap <silent><C-n> :bnext<CR>
 nnoremap <silent><C-x>p :echo expand('%')<CR>
 nnoremap <silent><C-x>fp :echo expand('%:p')<CR>
+nnoremap <silent>t1 :tabn1<CR>
+nnoremap <silent>t2 :tabn2<CR>
+nnoremap <silent>t3 :tabn3<CR>
 
 " terminal mode
 tnoremap <silent> <C-w>n <C-\><C-n>
