@@ -25,10 +25,10 @@ vim.opt.clipboard:append("unnamed")
 vim.opt.startofline = false
 vim.opt.compatible = false
 
--- カラースキーム
+-- color scheme
 vim.cmd.colorscheme("jellybeans")
 
--- 全角スペースのハイライト
+-- highlight space
 vim.api.nvim_create_augroup("highlightIdeographicSpace", {})
 vim.api.nvim_create_autocmd("Colorscheme", {
   group = "highlightIdeographicSpace",
@@ -39,6 +39,7 @@ vim.api.nvim_create_autocmd({ "VimEnter", "WinEnter" }, {
   command = [[match IdeographicSpace /　/]],
 })
 
+vim.g.mapleader = " "
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 map("n", "<C-p>", ":bprev<CR>", opts)
