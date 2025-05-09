@@ -31,7 +31,7 @@ which brew > /dev/null
 if [ $? -e 0 ]; then
     echo "Homebrew already exists [`which brew`]"
 else
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     while read line; do yes | brew install $line; done < ./brew.lst
     while read line; do yes | brew install $line; done < ./brewcask.lst
 fi
@@ -56,6 +56,4 @@ ln -s ~/ghq/$REPO/.tmux        .tmux
 ln -s ~/ghq/$REPO/.tmux.conf   .tmux.conf
 ln -s ~/ghq/$REPO/.config      .config
 ln -s ~/ghq/$REPO/.hammerspoon .hammerspoon
-ln -s .config/nvim             .vim
-ln -s .config/nvim/init.vim    .vimrc
 
