@@ -26,7 +26,7 @@ vim.opt.startofline = false
 vim.opt.compatible = false
 
 -- color scheme
-vim.cmd.colorscheme("jellybeans")
+vim.cmd.colorscheme("monokai")
 
 -- highlight space
 vim.api.nvim_create_augroup("highlightIdeographicSpace", {})
