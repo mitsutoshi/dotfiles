@@ -49,6 +49,8 @@ map("n", "<C-x>fp", ":echo expand('%:p')<CR>", opts)
 map("n", "t1", ":tabn1<CR>", opts)
 map("n", "t2", ":tabn2<CR>", opts)
 map("n", "t3", ":tabn3<CR>", opts)
+map("n", "\\", [["0p]], opts)
+map("n", "|", [["0P]], opts)
 
 -- lazy.nvim
 vim.opt.rtp:prepend("~/.config/nvim/lazy/lazy.nvim")
