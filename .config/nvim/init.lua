@@ -51,6 +51,8 @@ map("n", "t2", ":tabn2<CR>", opts)
 map("n", "t3", ":tabn3<CR>", opts)
 map("n", "\\", [["0p]], opts)
 map("n", "|", [["0P]], opts)
+map("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+map("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 
 -- lazy.nvim
 vim.opt.rtp:prepend("~/.config/nvim/lazy/lazy.nvim")
