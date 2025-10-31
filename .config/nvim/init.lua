@@ -26,7 +26,7 @@ vim.opt.startofline = false
 vim.opt.compatible = false
 
 -- color scheme
-vim.cmd.colorscheme("monokai")
+vim.cmd.colorscheme("jellybeans")
 
 -- highlight space
 vim.api.nvim_create_augroup("highlightIdeographicSpace", {})
@@ -57,5 +57,17 @@ map("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 map("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 
 -- lazy.nvim
-vim.opt.rtp:prepend("~/.config/nvim/lazy/lazy.nvim")
+local lazypath = vim.fn.stdpath("data") .. "~/.config/nvim/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
 require("lazy").setup("plugins")

@@ -12,6 +12,7 @@ alias g='cd $(ghq list --full-path | peco)'
 alias h='TMPH=`history -rn 1 | uni | peco`; echo $TMPH; echo $TMPH | tr -d "\n" | pbcopy'
 alias ej='trans en:ja'
 alias je='trans ja:en'
+alias cat='bat'
 
 alias tmblue="tmux select-pane -P 'bg=colour20,fg=white'"
 
@@ -80,3 +81,7 @@ function tmux_automatically_attach_session()
     fi
 }
 tmux_automatically_attach_session
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
