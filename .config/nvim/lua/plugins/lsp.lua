@@ -9,11 +9,6 @@ return {
 
       require("mason").setup()
 
-      require("mason-lspconfig").setup({
-        ensure_installed = { "gopls", "pyright", "rust_analyzer" },
-        automatic_installation = true,
-      })
-
       local function on_attach(_, bufnr)
         local map = vim.keymap.set
         local opts = { buffer = bufnr, noremap = true, silent = true }
@@ -28,10 +23,8 @@ return {
         map("n", "<leader>d", vim.diagnostic.open_float, { noremap = true, silent = true })
       end
 
-      local lspconfig = require("lspconfig")
-
       -- Go
-      lspconfig.gopls.setup({
+      vim.lsp.config('gopls', {
           on_attach = on_attach,
           settings = {
             gopls = {
@@ -43,12 +36,12 @@ return {
       })
 
       -- Python
-      lspconfig.pyright.setup({
+      vim.lsp.config('pyright', {
           on_attach = on_attach,
       })
 
       -- Rust
-      lspconfig.rust_analyzer.setup({
+      vim.lsp.config('rust_analyzer', {
           on_attach = on_attach,
           settings = {
               ["rust-analyzer"] = {
