@@ -1,1 +1,17 @@
-source ~/.vimrc
+let mapleader = " "
+
+nnoremap <C-p> :bprev<CR>
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-x>p :echo expand('%')<CR>
+nnoremap <C-x>fp :echo expand('%:p')<CR>
+nnoremap t1 :tabn1<CR>
+nnoremap t2 :tabn2<CR>
+nnoremap t3 :tabn3<CR>
+nnoremap \\ "0p
+nnoremap | "0P
+vnoremap \\ "0p
+vnoremap | "0P
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+set clipboard+=unnamedplus
