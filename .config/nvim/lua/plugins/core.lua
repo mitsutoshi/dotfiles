@@ -18,7 +18,6 @@ return {
     {
         'itchyny/lightline.vim',
         config = function()
-            -- Lightlineのカスタムfilename関数
             vim.g.lightline = {
                 component_function = {
                     filename = "LightlineFilename",
@@ -40,7 +39,7 @@ return {
         "APZelos/blamer.nvim",
         config = function()
           vim.g.blamer_enabled = 1
-          vim.g.blamer_delay = 500
+          vim.g.blamer_delay = 400
           vim.g.blamer_date_format = "%Y-%m-%d %H:%M:%S"
         end,
     },

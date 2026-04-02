@@ -4,7 +4,9 @@ description: Show a current exchange rate for specified currency. Use when you a
 argument-hint: usd/jpy
 ---
 
-Get a current exchange rate of $ARGUMENT[0]/$ARGUMENT[1]. And then, show the rate without any other words.
+# Get Rate
+
+Ges a current exchange rate of `$ARGUMENT[0]/$ARGUMENT[1]`. And then, show the rate without any other words.
 All we want to know is only the rate.
 
 When you are asked showing an exchange rate with argument `USD/JPY`, you should show the value of JPY to 1 USD.
