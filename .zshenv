@@ -4,7 +4,7 @@ export LC_ALL=en_US.UTF-8
 export EDITOR='vim'
 export VISUAL='vim'
 export HISTFILE=${HOME}/.zsh_history
-export HISTSIZE=5000
+export HISTSIZE=10000
 export SAVEHIST=10000
 
 # XDG
@@ -26,3 +26,15 @@ export PATH=$PATH:~/go/bin
 export PATH="/opt/homebrew/opt/mysql-client/bin:~/.local/share/solana/install/active_release/bin:$PATH"
 
 export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$HOME/.local/bin:$PATH"
+
+# bun completions
+[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

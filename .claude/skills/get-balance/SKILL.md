@@ -1,9 +1,12 @@
 ---
 name: get-balance
-description: Get cryptocurrency amount from specified addresses. Show the current amount when you are asked 'Show/Get balance' with a symbol of cryptocurrenty and at least one addresse.
+description: |-
+    Get cryptocurrency amount from specified addresses. Show the current amount when you are asked 
+    'Show/Get balance' with a symbol of cryptocurrenty and at least one address.
 ---
 
-When you get the current amount for specified addresses, choose an appropreate script from `./scripts/` directory and run it to get the balance of the addresses.
+Use this when you get an amount of cryptocurrency for specified addresses, choose an appropreate script 
+from `./scripts/` directory and run it to get the balance of the addresses.
 
 **Scripts**
 
