@@ -1,3 +1,4 @@
 *.sw*
 .config/*
 !.config/nvim
+.DS_Store

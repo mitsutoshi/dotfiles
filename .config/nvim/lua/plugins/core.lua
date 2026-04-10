@@ -38,9 +38,14 @@ return {
     {
         "APZelos/blamer.nvim",
         config = function()
-          vim.g.blamer_enabled = 1
+          vim.g.blamer_enabled = false
           vim.g.blamer_delay = 400
           vim.g.blamer_date_format = "%Y-%m-%d %H:%M:%S"
+
+          vim.keymap.set(
+            "n",
+            "<leader>gb",
+            ":BlamerToggle<CR>", { noremap = true, silent = true })
         end,
     },
     {

@@ -1,4 +1,4 @@
-vim.g.python3_host_prog = os.getenv("PYENV_ROOT") .. "/versions/neovim-python3/bin/python"
+--vim.g.python3_host_prog = os.getenv("PYENV_ROOT") .. "/versions/neovim-python3/bin/python"
 
 vim.opt.backupdir = vim.fn.expand("~/.vim")
 vim.opt.directory = vim.fn.expand("~/.vim")
@@ -57,7 +57,7 @@ map("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 map("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 
 -- lazy.nvim
-local lazypath = vim.fn.stdpath("data") .. "~/.config/nvim/lazy/lazy.nvim"
+local lazypath = vim.fn.stdpath("data") .. "lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
     "git",
