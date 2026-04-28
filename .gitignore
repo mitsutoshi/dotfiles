@@ -2,3 +2,5 @@
 .config/*
 !.config/nvim
 .DS_Store
+.tmux/plugins/*
+!.tmux/plugins/.gitignore
