@@ -1,4 +1,4 @@
---vim.g.python3_host_prog = os.getenv("PYENV_ROOT") .. "/versions/neovim-python3/bin/python"
+#vim.g.python3_host_prog = os.getenv("PYENV_ROOT") .. "/versions/neovim-python3/bin/python"
 
 vim.opt.backupdir = vim.fn.expand("~/.vim")
 vim.opt.directory = vim.fn.expand("~/.vim")

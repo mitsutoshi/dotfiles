@@ -14,27 +14,24 @@ export XDG_CONFIG_HOME=$HOME/.config
 export VIMRUNTIME=/opt/homebrew/Cellar/neovim/*/share/nvim/runtime
 
 # pyenv
-export PYENV_ROOT=~/.pyenv
+#export PYENV_ROOT=~/.pyenv
 
-# rust
+# cargo
 source "$HOME/.cargo/env"
 
 # go
 export PATH=$PATH:~/go/bin
 
-# solana
-export PATH="/opt/homebrew/opt/mysql-client/bin:~/.local/share/solana/install/active_release/bin:$PATH"
-
-export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
-
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="$HOME/.local/bin:$PATH"
-
-# bun completions
-[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+#export PATH="~/.local/share/solana/install/active_release/bin:$PATH"
+#export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
+#
+#export NVM_DIR="$HOME/.config/nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#
+
+export PATH="$HOME/.local/bin:$PATH"
