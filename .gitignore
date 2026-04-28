@@ -1,6 +1,9 @@
 *.sw*
 .config/*
 !.config/nvim
+<<<<<<< HEAD
 .DS_Store
+=======
+>>>>>>> 88b12b8 (update)
 .tmux/plugins/*
 !.tmux/plugins/.gitignore
