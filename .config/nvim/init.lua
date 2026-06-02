@@ -1,5 +1,3 @@
-#vim.g.python3_host_prog = os.getenv("PYENV_ROOT") .. "/versions/neovim-python3/bin/python"
-
 vim.opt.backupdir = vim.fn.expand("~/.vim")
 vim.opt.directory = vim.fn.expand("~/.vim")
 vim.opt.showmode = true
@@ -24,9 +22,6 @@ vim.opt.hlsearch = true
 vim.opt.clipboard:append("unnamed")
 vim.opt.startofline = false
 vim.opt.compatible = false
-
--- color scheme
-vim.cmd.colorscheme("jellybeans")
 
 -- highlight space
 vim.api.nvim_create_augroup("highlightIdeographicSpace", {})
@@ -70,4 +65,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins")
+require("lazy").setup("plugins", {
+  rocks = { enabled = false },
+})

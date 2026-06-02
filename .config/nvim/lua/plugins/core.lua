@@ -1,18 +1,14 @@
 return {
     {
-        'preservim/nerdtree',
-        config = function()
-            -- toggle tree by Ctrl-e
-            vim.keymap.set("n", "<C-e>", ":NERDTreeToggle<CR>", { noremap = true, silent = true })
-            -- show hidden files
-            vim.g.NERDTreeShowHidden = 1
-        end
+      "nvim-tree/nvim-tree.lua",
+      dependencies = {
+        "nvim-tree/nvim-web-devicons",
+      },
+      config = function()
+        require("nvim-tree").setup()
+        vim.keymap.set("n", "<C-e>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+      end,
     },
-    {
-        'Xuyuanp/nerdtree-git-plugin',
-        dependencies = { 'preservim/nerdtree' }
-    },
-    { 'ryanoasis/vim-devicons' },
     { 'ConradIrwin/vim-bracketed-paste' },
     { 'yuttie/comfortable-motion.vim' },
     {
@@ -29,9 +25,7 @@ return {
                       \ &filetype ==# 'unite' ? unite#get_status_string() :
                       \ &filetype ==# 'vimshell' ? vimshell#get_status_string() :
                       \ expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
-              endfunction
-            ]])
-            vim.g.vimfiler_force_overwrite_statusline = 0
+              endfunction ]]) vim.g.vimfiler_force_overwrite_statusline = 0
             vim.g.vimshell_force_overwrite_statusline = 0
         end,
     },
@@ -52,6 +46,20 @@ return {
         "preservim/tagbar",
         config = function()
             vim.keymap.set("n", "<F8>", ":TagbarToggle<CR>", { noremap = true, silent = true })
+        end,
+    },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000,
+        config = function()
+          require("catppuccin").setup({
+            flavour = "mocha",
+            integrations = {
+              nvimtree = true,
+            },
+          })
+          vim.cmd.colorscheme "catppuccin-nvim"
         end,
     },
 }

@@ -49,11 +49,14 @@ return {
             cargo = { allFeatures = true },
             check = { command = "clippy" },
             formatting = { enable = true },
+            diagnostics = {
+              enable = false;
+            }
           },
         },
       })
 
-      vim.lsp.enable({ "gopls", "rust_analyzer", "pyright" })
+      vim.lsp.enable({ "gopls", "rust_analyzer" })
 
     end,
   }

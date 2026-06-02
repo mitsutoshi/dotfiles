@@ -2,7 +2,7 @@ return {
     {
         "folke/snacks.nvim",
         opts = {
-            image = { enabled = true },
+            image = { enabled = false },
             indent = {
                 enabled = "1",
                 char = "|",
