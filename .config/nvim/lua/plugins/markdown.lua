@@ -1,20 +1,15 @@
 return {
     {
-        'previm/previm',
-        config = function()
-            vim.g.previm_enable_realtime = 1
-            vim.g.previm_open_cmd = "open -a 'Google Chrome'"
+        "iamcco/markdown-preview.nvim",
+        cmd = {
+            "MarkdownPreviewToggle",
+            "MarkdownPreview",
+            "MarkdownPreviewStop"
+        },
+        build = "cd app && yarn install",
+        init = function()
+          vim.g.mkdp_filetypes = { "markdown" }
         end,
-    },
-    {
-        'tyru/open-browser.vim',
-        lazy = true,
-        dependencies = { 'previm/previm' },
-    },
-    {
-        'plasticboy/vim-markdown',
-        config = function()
-            vim.g.vim_markdown_folding_disabled = 1
-        end,
-    },
+        ft = { "markdown" },
+    }
 }
